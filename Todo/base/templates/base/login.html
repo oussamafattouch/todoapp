@@ -1,15 +1,41 @@
 {% extends 'base/main.html' %} {% block content %}
+{% load static %}
 
 <div class="header-bar">
-	<h1>Login</h1>
+ 
+	<h1>Organiza - Login</h1>
+	 
 </div>
 
 <div class="card-body">
 	<form method="POST" action="">
+		<div class="d-flex justify-content-center">
+		<img src="{% static 'img/organiza.png' %}" style="width: 80%; height: auto;">
+	</div>
 		{% csrf_token %} {{form.as_p}}
 		<input class="button" type="submit" value="Login" />
 	</form>
-	<p>Don't have an account ?<a href="{% url 'register' %}">Register</a></p>
-</div>
+   <p> Organiza ! Don't forget your task again ! </p>
+   <div class="d-flex justify-content-center">
+	<img src="{% static 'img/pic.png' %}" style="width: 15%; height: auto;">
+   </div>
+</div> 
+ {% endblock content %}
 
-{% endblock content %}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    
+
